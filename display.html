@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+    <title>Display Book Details</title>
+</head>
+<body>
+    <h1>Book Details</h1>
+    <p>Open your browser console to view the details.</p>
+    <script>
+        // JSON data
+        const data = {
+            "Books": [
+                {
+                    "title": "The Great Gatsby",
+                    "author": "F. Scott Fitzgerald",
+                    "publicationYear": 1925,
+                    "genres": ["Fiction", "Classics"]
+                },  
+                {
+                    "title": "To Kill a Mockingbird",
+                    "author": "Harper Lee",
+                    "publicationYear": 1960,
+                    "genres": ["Fiction", "Coming-of-Age"]
+                }
+            ]
+        };
+
+        // (a) The title of the first book
+        console.log("Title of the first book:", data.Books[0].title);
+
+        // (b) The author of the second book
+        console.log("Author of the second book:", data.Books[1].author);
+
+        // (c) The genres of all books
+        console.log("Genres of all books:");
+        data.Books.forEach((book, index) => {
+            console.log(`Book ${index + 1}: ${book.genres.join(", ")}`);
+        });
+    </script>
+</body>
+</html>
